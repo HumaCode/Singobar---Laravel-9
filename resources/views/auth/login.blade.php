@@ -42,9 +42,12 @@
                             @csrf
 
                             <div class="form-group mb-3">
-                                <input type="text" name="login" class="form-control" id="login"
+                                <input type="text" name="login"
+                                    class="form-control @error('login') is-invalid @enderror" id="login"
                                     placeholder="Nama/Username/Email" value="{{ old('login') }}">
-
+                                @error('login')
+                                <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
                             <div class="form-group mb-4">
                                 <input type="password" name="password" class="form-control" id="Password"
