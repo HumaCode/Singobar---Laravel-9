@@ -30,9 +30,12 @@ class NewPasswordController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'token' => ['required'],
-            'email' => ['required', 'email'],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'token'     => ['required'],
+            'email'     => ['required', 'email'],
+            'password'  => ['required', 'confirmed', Rules\Password::defaults()],
+        ], [
+            'password.required'     => 'Password tidak boleh kosong...!',
+            'password.confirmed'    => 'Password sama...!',
         ]);
 
         // Here we will attempt to reset the user's password. If it is successful we
@@ -54,8 +57,12 @@ class NewPasswordController extends Controller
         // the application's home authenticated view. If there is an error we can
         // redirect them back to where they came from with their error message.
         return $status == Password::PASSWORD_RESET
-                    ? redirect()->route('login')->with('status', __($status))
-                    : back()->withInput($request->only('email'))
-                            ->withErrors(['email' => __($status)]);
+            ? redirect()->route('login')->with([
+                'status'        => __($status),
+                'message'       => 'Password berhasil direset..',
+                'alert-type'    => 'success',
+            ])
+            : back()->withInput($request->only('email'))
+            ->withErrors(['email' => __($status)]);
     }
 }
