@@ -42,8 +42,8 @@
                             @csrf
 
                             <div class="form-group mb-3">
-                                <input type="text" name="email" class="form-control" id="Email"
-                                    placeholder="Email address" value="{{ old('email') }}">
+                                <input type="text" name="login" class="form-control" id="login"
+                                    placeholder="Nama/Username/Email" value="{{ old('login') }}">
 
                             </div>
                             <div class="form-group mb-4">
