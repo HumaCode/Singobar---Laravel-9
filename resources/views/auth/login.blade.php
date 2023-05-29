@@ -44,10 +44,12 @@
                                 <input type="password" name="password" class="form-control" id="Password"
                                     placeholder="Password">
                             </div>
+
                             <div class="custom-control custom-checkbox text-left mb-4 mt-2">
                                 <input type="checkbox" id="remember_me" class="custom-control-input" name="remember">
-                                <label class="custom-control-label" for="customCheck1">Remember me.</label>
+                                <label class="custom-control-label" for="remember_me">Remember me.</label>
                             </div>
+
                             <button type="submit" class="btn btn-block btn-primary mb-4">Login</button>
                             <hr>
                             <p class="mb-2 text-muted">Lupa password? <a href="auth-reset-password.html"

@@ -16,11 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     // return view('home_frontend');
-    return view('tes');
+    return view('home_frontend');
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('admin_dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
