@@ -41,7 +41,7 @@
 
                             <div class="form-group mb-3">
                                 <input type="text" name="name" class="form-control  @error('name') is-invalid @enderror"
-                                    id="nama" placeholder="Nama">
+                                    id="nama" placeholder="Nama" value="{{ old('name') }}">
                                 @error('name')
                                 <span class="text-danger mt-1">{{ $message }}</span>
                                 @enderror
@@ -52,7 +52,7 @@
                             <div class="form-group mb-3">
                                 <input type="text" name="username"
                                     class="form-control @error('username') is-invalid @enderror" id="username"
-                                    placeholder="Username">
+                                    placeholder="Username" value="{{ old('username') }}">
                                 @error('username')
                                 <span class="text-danger mt-1">{{ $message }}</span>
                                 @enderror
@@ -60,8 +60,9 @@
 
 
                             <div class="input-group mb-3">
-                                <input type="email" class="form-control @error('email') is-invalid @enderror"
-                                    placeholder="Email">
+                                <input type="email" name="email"
+                                    class="form-control @error('email') is-invalid @enderror" placeholder="Email"
+                                    value="{{ old('email') }}">
                                 <div class="input-group-append">
                                     <button class="btn  btn-primary" type="button" data-toggle="modal"
                                         data-target="#exampleModalCenter"><i class="feather icon-info"></i></button>
