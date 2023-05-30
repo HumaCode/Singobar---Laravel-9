@@ -20,11 +20,17 @@
     {{-- toaster --}}
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
 
-
+    @stack('css')
 
 </head>
 
 <body class="">
+
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
 
     <!-- [ navigation menu ] start -->
     @include('body.navbar')
@@ -38,7 +44,24 @@
 
     <!-- [ Main Content ] start -->
     <div class="pcoded-main-container">
-        @yield('admin')
+        <div class="pcoded-content">
+            <!-- [ breadcrumb ] start -->
+            <div class="page-header">
+                <div class="page-block">
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <div class="page-header-title">
+                                <h5 class="m-b-10">@yield('title')</h5>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- [ breadcrumb ] end -->
+
+            @yield('admin')
+        </div>
     </div>
 
 
@@ -54,6 +77,7 @@
     <!-- custom-chart js -->
     <script src="{{ asset('backend') }}/assets/js/pages/dashboard-main.js"></script>
 
+    @stack('scripts')
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 

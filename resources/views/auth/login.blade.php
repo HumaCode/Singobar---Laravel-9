@@ -12,10 +12,10 @@
     <meta name="keywords" content="">
     <meta name="author" content="Phoenixcoded" />
     <!-- Favicon icon -->
-    <link rel="icon" href="{{ asset('backend') }}/assets//images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ asset('backend') }}/assets/images/favicon.ico" type="image/x-icon">
 
     <!-- vendor css -->
-    <link rel="stylesheet" href="{{ asset('backend') }}/assets//css/style.css">
+    <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/style.css">
 
     {{-- toaster --}}
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
@@ -59,6 +59,12 @@
                                 <label class="custom-control-label" for="remember_me">Remember me.</label>
                             </div>
 
+                            {{-- <button class="btn btn-primary event-btn btn-block" type="submit">
+                                <span class="spinner-grow spinner-grow-sm" role="status"></span>
+                                <span class="load-text">Harap Tunggu...</span>
+                                <span class="btn-text">Login</span>
+                            </button> --}}
+
                             <button type="submit" class="btn btn-block btn-primary mb-4">Login</button>
                             <hr>
                             <p class="mb-2 text-muted text-center">Lupa password? <a
@@ -73,9 +79,9 @@
     </div>
 </div>
 
-<script src="{{ asset('backend') }}/assets//js/vendor-all.min.js"></script>
-<script src="{{ asset('backend') }}/assets//js/plugins/bootstrap.min.js"></script>
-
+<script src="{{ asset('backend') }}/assets/js/vendor-all.min.js"></script>
+<script src="{{ asset('backend') }}/assets/js/plugins/bootstrap.min.js"></script>
+<script src="{{ asset('backend') }}/assets/js/pcoded.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
 <script>

@@ -18,7 +18,7 @@ $user = App\Models\User::findOrFail(auth()->user()->id);
                 </div>
                 <div class="collapse" id="nav-user-link">
                     <ul class="list-unstyled">
-                        <li class="list-group-item"><a href="user-profile.html"><i
+                        <li class="list-group-item "><a href="{{ route('profile.edit') }}"><i
                                     class="feather icon-user m-r-5"></i>Profile</a></li>
                         <li class="list-group-item"><a href="#!"><i class="feather icon-settings m-r-5"></i>Setting</a>
                         </li>
@@ -38,8 +38,8 @@ $user = App\Models\User::findOrFail(auth()->user()->id);
                 <li class="nav-item pcoded-menu-caption">
                     <label>Navigation</label>
                 </li>
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
+                <li class="nav-item ">
+                    <a href="index.html" class="nav-link"><span class="pcoded-micon"><i
                                 class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
                 </li>
                 <li class="nav-item pcoded-hasmenu">
